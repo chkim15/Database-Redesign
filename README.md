@@ -1,0 +1,11 @@
+# Redesigning Database
+Building a framework for database redesign of my family business 
+
+## Overview  
+Our family business, which distributes textile products to the Middle East, has been running for more than 30 years. Although I am not quite sure exactly when our database was built, I know it is at least 20 years old. Since then, there have been a lot of changes in our business model, and I have felt the need for redesigning or upgrading our database to reflect the company’s current operations. This project would be a great reference for the actual redevelopment. 
+I’m guessing that the current database was developed in SQL, but I do not have any access to it. I only have access to the software, which can query results such as the list of orders, items, payments, customers, etc. There are many things that the current software cannot handle, so we have managed those in separate Excel sheets, which has been very cumbersome for us. 
+For this project, I will use the relational database because there are many attributes that can be grouped together and normalized, which then can reduce redundancies in the database. Also, I will be dealing with roughly tens of thousands of records, which is relatively not huge. Considering that there have been no more than 500 new orders per year, we would not worry too much about the scalability as the data growth will not be overwhelming, but the relationships among tables will be designed simply so that the database can scale to any size. My focus should be on the general structure/relationship of the entities in the database since the actual database would contain a lot more tables and fields than this project presents. 
+MySQL will be used throughout this project.
+
+## Disclaimer
+The data used in this project are randomly generated. Since the actual data in our company contains a lot of confidential information, I decided not to use those. Manually making arbitrary changes to the actual data would have been optimal, but I could not find a way that would not be too time-consuming although the random generation also took an unexpectedly long time to make it seem reasonable. Some numbers in this randomly generated data might be unrealistic, but I believe it is in an acceptable range for the queries used in this project.

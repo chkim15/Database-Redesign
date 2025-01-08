@@ -1,13 +1,57 @@
-# Redesigning Database
-Building a framework for database redesign of my family business 
+# Database Redesign using MySQL
 
-## Overview  
-The family business, with over 30 years of history in distributing textile products to the Middle East, operates on a database that's approximately 20 years old. Given the significant changes in our business model, there's an evident need to either redesign or upgrade our database to align with the company's current operations, making this project an essential reference for the forthcoming redevelopment.
-While the specifics of the original database creation are unclear, it's presumed to have been developed using SQL. My access is limited to software functionalities that enable queries for orders, items, payments, customers, etc. The limitations of the current system have necessitated the use of separate Excel sheets for managing various aspects, leading to inefficiencies.
-For the redesign, I will utilize a relational database model. This approach is suitable due to the presence of numerous attributes that can be effectively grouped and normalized to minimize redundancies. The database will manage tens of thousands of records, which, considering the average of no more than 500 new orders per year, makes scalability a minor concern. However, the design will ensure simplicity in table relationships, allowing for scalability if needed. The primary focus will be on establishing a robust general structure and relationships between entities, acknowledging that the actual database will encompass more tables and fields than this project depicts. MySQL will be used throughout this project.
+Database modernization project for a 30-year-old Middle Eastern textile distribution business, replacing legacy systems with a scalable MySQL solution.
 
-## Disclaimer
-The data used in this project are randomly generated. Since the actual data in our company contains a lot of confidential information, I decided not to use those. Manually making arbitrary changes to the actual data would have been optimal, but I could not find a way that would not be too time-consuming although the random generation also took an unexpectedly long time to make it seem reasonable. Some numbers in this randomly generated data might be unrealistic, but I believe it is in an acceptable range for the queries used in this project.
+## Business Context
 
-## Schema
-The actual database would be much complicated than what is presented here, but for the purpose of this project, I narrowed it down to the most significant entities and attributes. Please refer to the diagram on the next page for more details.
+- Replacing 20-year-old database system
+- Eliminating reliance on separate Excel sheets
+- Handling ~500 orders annually
+- Managing multi-currency transactions (USD/KRW)
+- Supporting import/export logistics
+
+## Database Design
+
+### Core Features
+- Normalized relational schema
+- Integrated currency conversion
+- Multi-payment order tracking
+- Production sequence monitoring
+- Logistics management (import/export)
+
+### Key Tables
+- Customers
+- Orders
+- Items
+- Payments
+- Production
+- Import/Export
+- Exchange Rates
+
+### Implementation Details
+- MySQL backend
+- Stored procedures for common queries
+- Automated exchange rate handling
+- Cost and profit analysis tools
+- Comprehensive reporting system
+
+## Sample Queries
+1. Order information retrieval
+2. Customer balance tracking
+3. Monthly/yearly sales analysis 
+4. Cost and profit calculations
+5. Item specification lookup
+
+## Future Development
+- API integration for live exchange rates
+- Web interface development
+- Shipping system integration
+- Automated reporting tools
+
+## Technical Notes
+- Schema designed for tens of thousands of records
+- Optimized for < 500 new orders/year
+- Test data randomly generated
+- Scalable table relationships
+
+*Project completed December 2022*
